@@ -1,0 +1,67 @@
+# 5 x 5 - chưa rõ vì sao test nhỏ này lại bị out of bound index
+input = {
+    "rows": [[1], [1], [2, 2], [3], [1, 3]],
+    "cols": [[1, 1, 1], [1], [2], [3], [4]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# 7 x 7 - cũng đang lỗi index
+input = {
+    "rows": [[1], [1, 1], [1, 1], [5], [1, 1], [1, 1], [1, 1]],
+    "cols": [[3], [1], [3], [1, 1], [3], [1], [3]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# Các test sinh ngẫu nhiên
+
+# 8 x 8 - từ 8 trở lên thì bắt đầu không lỗi
+input = {
+    "rows": [[8], [2, 2], [1, 1, 1, 1], [1, 2, 1], [1, 2, 1], [1, 1, 1, 1], [2, 2], [8]],
+    "cols": [[8], [2, 2], [1, 1, 1, 1], [1, 2, 1], [1, 2, 1], [1, 1, 1, 1], [2, 2], [8]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# 9 x 9 - test khó, ít thông tin, và có nhiều hơn 1 lời giải cho nonogram này
+input = {
+    "rows": [[3], [3], [3], [3], [3], [3], [3], [3], [3]],
+    "cols": [[1], [2], [3], [3], [3], [3], [3], [2], [1]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# 10 x 10 - test này chạy ổn định vì chỉ có 1 đáp án, thường tính ngẫu nhiên giúp dễ ra kết quả
+input = {
+    "rows": [[4], [6], [4], [1, 1, 4], [5, 4], [3, 4], [1, 1, 1], [2, 3], [3], [3]],
+    "cols": [[2, 1], [4], [3], [1], [1, 2, 3], [2, 4], [6, 3], [7], [6], [5]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# 10 x 10 - test khó, ít thông tin, và có thể nhiều hơn 1 lời giải cho nonogram này
+input = {
+    "rows": [[2], [2], [2], [2], [2], [2], [2], [2], [2], [1]],
+    "cols": [[1], [2], [2], [2], [2], [2], [2], [2], [2], [2]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+# 11 x 11
+input = {
+    "rows": [[5], [1, 1], [1, 1], [1, 1], [11], [1], [1], [1], [1, 1], [1, 1], [2]],
+    "cols": [[2], [1, 1], [1, 1, 2], [1, 1, 1], [1, 1, 1], [1, 6], [1, 1], [1, 1], [1, 1], [1, 1], [2]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
+
+# 15 x 15 - khó chạy ra kết quả chính xác vì tính ngẫu nhiên của thuật toán - đôi khi qua nhiều thế hệ mà điểm fitness bị trơ không thay đổi
+input = {
+    "rows": [[4], [6], [11], [1, 4, 3], [5, 3], [4, 3, 2], [10, 2], [3, 5], [2, 4], [2, 1], [3, 5], [1, 5], [1, 1, 1, 4], [5, 3], [6, 3]],
+    "cols": [[5, 3], [1, 7], [7, 1, 1], [6], [4, 1, 3], [3, 3, 2], [3, 3, 3], [3, 3, 2], [10, 2], [8, 1], [4, 2], [3], [5], [2, 5], [2, 5]],
+    "initial_population": 1500,
+    "mutation_individual_probability": 0.05
+}
+
